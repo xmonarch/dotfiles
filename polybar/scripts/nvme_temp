@@ -1,0 +1,3 @@
+#!/bin/bash
+sensors | head -8 | tail -1 | awk '{print $2}' | cut -d'+' -f 2 | cut -d'.' -f 1 
+

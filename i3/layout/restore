@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+workspace=0
+while read line; do
+        if [ "$line" = true ]; then
+                break # break if we found the active workspace 
+        else
+                workspace="$line" # evaluate the next workspace
+        fi
+done < <(i3-msg -t get_workspaces | jshon -a -e name -u -p -e focused -u)
+
+case "$workspace" in
+   "0")
+     i3-msg 'append_layout ~/.config/i3/layout/layout0.json'
+     firefox &
+     firefox &
+     ;;
+   "1")
+     # done!
+     i3-msg 'append_layout ~/.config/i3/layout/layout1.json'
+     transmission-gtk &
+     thunar &
+     thunar &
+     ;;
+   "2")
+     # done!
+     i3-msg 'append_layout ~/.config/i3/layout/layout2.json'
+     termite &
+     termite &
+     termite &
+     ;;
+   *)
+     ;;
+esac
+

@@ -1,0 +1,40 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1996,
+       "width": 3720,
+       "x": 0,
+       "y": 0
+    },
+    "name": "",
+    "percent": 0.4984375,
+    "swallows": [
+       {
+         "class": "^firefox$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1996,
+       "width": 3720,
+       "x": 0,
+       "y": 0
+    },
+    "name": "",
+    "percent": 0.5015625,
+    "swallows": [
+       {
+			"class": "^firefox$"
+       }
+    ],
+    "type": "con"
+}
+

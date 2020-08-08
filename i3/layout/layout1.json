@@ -1,0 +1,68 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1994,
+       "width": 1828,
+       "x": 60,
+       "y": 82
+    },
+    "name": "",
+    "percent": 0.5,
+    "swallows": [
+       {
+		  "class": "^Transmission\\-gtk$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2098,
+               "width": 1906,
+               "x": 0,
+               "y": 0
+            },
+            "name": "",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Thunar$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 2098,
+               "width": 1906,
+               "x": 0,
+               "y": 0
+            },
+            "name": "",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Thunar$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

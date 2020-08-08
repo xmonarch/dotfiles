@@ -1,0 +1,115 @@
+set $mod Mod4
+
+floating_modifier $mod
+
+set_from_resource $fg #b48ead #b48ead
+set_from_resource $bg #5e81ac #5e81ac
+
+bindsym $mod+Return exec termite
+bindsym $mod+d exec dmenu_run -fn 'Terminus-11' -nb "#2e3440" -nf "#a3be8c" -sb "#a3be8c" -sf "#2e3440"
+bindsym $mod+F12 exec wal -R -e
+bindsym $mod+Shift+q kill
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+
+# switch to workspace
+bindsym $mod+grave workspace 0
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+Shift+grave workspace 11
+bindsym $mod+Shift+1 workspace 12
+bindsym $mod+Shift+2 workspace 13
+bindsym $mod+Shift+3 workspace 14
+bindsym $mod+Shift+4 workspace 15
+bindsym $mod+Shift+5 workspace 16
+bindsym $mod+Shift+6 workspace 17
+bindsym $mod+Shift+7 workspace 18
+bindsym $mod+Shift+8 workspace 19
+bindsym $mod+Shift+9 workspace 20
+bindsym $mod+Shift+0 workspace 21
+
+gaps inner 20
+gaps outer 0
+for_window [class="^.*"] border pixel 0
+border_radius 10
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $fg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
+# move focused container to workspace
+bindsym $mod+Control+grave move container to workspace 0
+bindsym $mod+Control+1 move container to workspace 1
+bindsym $mod+Control+2 move container to workspace 2
+bindsym $mod+Control+3 move container to workspace 3
+bindsym $mod+Control+4 move container to workspace 4
+bindsym $mod+Control+5 move container to workspace 5
+bindsym $mod+Control+6 move container to workspace 6
+bindsym $mod+Control+7 move container to workspace 7
+bindsym $mod+Control+8 move container to workspace 8
+bindsym $mod+Control+9 move container to workspace 9
+bindsym $mod+Control+0 move container to workspace 10
+bindsym $mod+Control+Shift+grave move container to workspace 11
+bindsym $mod+Control+Shift+1 move container to workspace 12
+bindsym $mod+Control+Shift+2 move container to workspace 13
+bindsym $mod+Control+Shift+3 move container to workspace 14
+bindsym $mod+Control+Shift+4 move container to workspace 15
+bindsym $mod+Control+Shift+5 move container to workspace 16
+bindsym $mod+Control+Shift+6 move container to workspace 17
+bindsym $mod+Control+Shift+7 move container to workspace 18
+bindsym $mod+Control+Shift+8 move container to workspace 19
+bindsym $mod+Control+Shift+9 move container to workspace 20
+bindsym $mod+Control+Shift+0 move container to workspace 21
+
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+F1 exec "restore"
+
+set $mode_system System (s) suspend, (r) reboot, (p) shutdown
+mode "$mode_system" {
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/lock suspend, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/lock reboot, mode "default"
+    bindsym p exec --no-startup-id ~/.config/i3/scripts/lock shutdown, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Escape exec --no-startup-id i3lock-fancy-rapid 5 3
+bindsym $mod+F4 mode "$mode_system"
+hide_edge_borders smart
+
+exec --no-startup-id /usr/bin/feh --bg-fill ~/.config/i3/img/ben-den-engelsen-lQFEdIBghv0-unsplash.jpg
+exec --no-startup-id nm-applet
+exec --no-startup-id picom -b
+exec --no-startup-id setxkbmap pl
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id dunst
+
