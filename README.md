@@ -1,5 +1,7 @@
 # dotfiles
 
+![screenshot1](/screenshots/screenshot.jpg)
+
 ## basics
 
 - **system**: archlinux
