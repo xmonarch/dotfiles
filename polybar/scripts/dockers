@@ -28,7 +28,7 @@ while IFS= read -rd '' key; do
 done < <(printf '%s\0' "${!statuses[@]}" | sort -z)
 
 
-LIST="%{+u} "
+LIST=" "
 TAB=' '
 count="0"
 for key in "${sorted[@]}"; do
