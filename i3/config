@@ -49,7 +49,7 @@ bindsym $mod+Shift+8 workspace 19
 bindsym $mod+Shift+9 workspace 20
 bindsym $mod+Shift+0 workspace 21
 
-gaps inner 20
+gaps inner 40
 gaps outer 0
 for_window [class="^.*"] border pixel 0
 border_radius 10
@@ -106,10 +106,8 @@ bindsym $mod+Escape exec --no-startup-id i3lock-fancy-rapid 5 3
 bindsym $mod+F4 mode "$mode_system"
 hide_edge_borders smart
 
-exec --no-startup-id /usr/bin/feh --bg-fill ~/.config/i3/img/ben-den-engelsen-lQFEdIBghv0-unsplash.jpg
+exec --no-startup-id /usr/bin/feh --bg-scale ~/.config/i3/img/SBKjnxm.jpg 
 exec --no-startup-id nm-applet
-exec --no-startup-id picom -b
 exec --no-startup-id setxkbmap pl
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
-
