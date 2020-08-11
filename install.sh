@@ -4,7 +4,6 @@ read -p "WARNING: This may overwrite your current configs. Proceed? [y/N]" -n 1 
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	ln -sfn $PWD/picom ~/.config/picom
 	ln -sfn $PWD/termite ~/.config/termite
 	ln -sfn $PWD/fish ~/.config/fish
 	ln -sfn $PWD/i3 ~/.config/i3
