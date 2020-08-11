@@ -2,13 +2,6 @@
 
 declare -A statuses
 
-CONTAINERS=$(docker ps -f "status=exited" | grep -v NAMES | grep -v k8s | awk '{print $NF}')
-if [ -n "$CONTAINERS" ]; then
-  while read -r line; do
-      statuses["$line"]="e"
-    done <<< "$CONTAINERS"
-fi
-
 CONTAINERS=$(docker ps | grep -v NAMES | grep -v k8s | awk '{print $NF}')
 if [ -n "$CONTAINERS" ]; then
   while read -r line; do
@@ -33,11 +26,9 @@ TAB=' '
 count="0"
 for key in "${sorted[@]}"; do
     if [ "${statuses[$key]}" == "a" ]; then
-      CONTAINER="%{B#a3be8c}%{F#2e3440} "
-    else
-      CONTAINER="%{B#b48ead}%{F#2e3440} "
+      CONTAINER=" "
+      CONTAINER="$CONTAINER$key "
     fi
-    CONTAINER="$CONTAINER$key %{B- F-}"
     if [ "$count" -eq "0" ]; then
       count="1"
     else
