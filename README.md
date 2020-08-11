@@ -1,7 +1,5 @@
 # dotfiles
 
-![screenshot1](/screenshots/screenshot.jpg)
-
 ## basics
 
 - **system**: archlinux
@@ -11,5 +9,3 @@
 - **shell**: fish
 - **terminal**: termite
 - **font**: terminus
-- **compositor**: picom
-- **wallpaper**: [modified version of this](https://unsplash.com/photos/lQFEdIBghv0)
