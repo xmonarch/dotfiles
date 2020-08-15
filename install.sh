@@ -5,6 +5,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	ln -sfn $PWD/termite ~/.config/termite
+	ln -sfn $PWD/picom ~/.config/picom
 	ln -sfn $PWD/fish ~/.config/fish
 	ln -sfn $PWD/i3 ~/.config/i3
 	ln -sfn $PWD/polybar ~/.config/polybar
