@@ -26,7 +26,7 @@ separator =
 modules-left = i3
 modules-center = date
 modules-right = docker
-font-0 = Terminus:size=14;0
+font-0 = Terminus (TTF):size=6;0
 
 wm-restack = i3
 tray-position = none
@@ -57,7 +57,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 separator = |
-font-0 = Terminus:size=14:2
+font-0 = Terminus (TTF):size=6:2
 overline-size = 1
 underline-size = 0
 underline-color = ${colors.alert}
