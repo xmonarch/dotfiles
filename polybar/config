@@ -52,12 +52,12 @@ dpi = 192
 background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 1
-padding-left = 1
-padding-right = 1
-module-margin-left = 1
-module-margin-right = 1
-separator = |
-font-0 = Terminus (TTF):size=6:2
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+separator = 
+font-0 = Terminus (TTF):size=6
 overline-size = 1
 underline-size = 0
 underline-color = ${colors.alert}
@@ -71,13 +71,13 @@ type = custom/script
 exec = ~/.config/polybar/scripts/memory
 format = <label>
 format-padding = 1
-label = MEM %output%
+label = %{B#4c566a} MEM %{B-}%output%
 interval = 10
 
 [module/volume]
 type = internal/pulseaudio
 sink = alsa_output.usb-PreSonus_PreSonus_AudioBox_iTwo_AB5C14101903-00.analog-stereo
-format-volume = VOL <label-volume>
+format-volume = %{B#4c566a} VOL %{B-} <label-volume>
 format-volume-padding = 1
 label-muted = VOL
 format-muted-padding = 1
@@ -87,7 +87,8 @@ type = custom/script
 exec = ~/.config/polybar/scripts/dirty
 format = <label>
 format-padding = 1
-label = USB %output%
+format-underline = #4c566a
+label = %{B#4c566a} USB %{B-} %output%
 interval = 1
 
 [module/cpu_temp]
@@ -95,7 +96,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/cpu_temp
 format = <label>
 format-padding = 1
-label = CPU %output%°C
+label = %{B#4c566a} CPU %{B-} %output%°C
 interval = 5
 
 [module/nvme_temp]
@@ -103,14 +104,14 @@ type = custom/script
 exec = ~/.config/polybar/scripts/nvme_temp
 format = <label>
 format-padding = 1
-label = NVME %output%°C
+label = %{B#4c566a} NVME %{B-} %output%°C
 interval = 5
 
 [module/vpn]
 type = custom/script
 exec = pgrep openvpn
 interval = 3
-label = VPN
+label = %{B#4c566a} VPN %{B-}
 format-padding = 1
 
 [module/work]
@@ -118,7 +119,7 @@ type = custom/script
 exec = echo work
 exec-if = ip addr show | grep 11.11.11
 format = <label>
-label = WORK VPN
+label = %{B#4c566a} WORK VPN %{B-}
 interval = 5
 format-padding = 1
 
@@ -188,7 +189,8 @@ label-mode-padding = 1
 label-mode-foreground = ${colors.foreground}
 label-mode-background = #00000000
 label-focused = %icon%
-label-focused-underline = ${colors.foreground}
+#label-focused-underline = ${colors.foreground}
+label-focused-background = #4c566a
 label-focused-padding = 1
 label-unfocused = %icon%
 label-unfocused-padding = 1
