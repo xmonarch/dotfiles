@@ -1,6 +1,6 @@
 # dotfiles
 
-![Sample](/screen/screenshot.png)
+![Sample](/screens/screenshot.png)
 
 - **system**: archlinux
 - **theme**: nord
