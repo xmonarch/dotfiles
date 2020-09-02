@@ -6,7 +6,7 @@ set_from_resource $fg #b48ead #b48ead
 set_from_resource $bg #5e81ac #5e81ac
 
 bindsym $mod+Return exec termite
-bindsym $mod+d exec dmenu_run -fn 'Terminus (TTF)-10' -nb "#2e3440" -nf "#a3be8c" -sb "#a3be8c" -sf "#2e3440"
+bindsym $mod+d exec dmenu_run -fn 'Terminus (TTF)-12' -nb "#2e3440" -nf "#88c0d0" -sb "#88c0d0" -sf "#2e3440"
 bindsym $mod+F12 exec wal -R -e
 bindsym $mod+Shift+q kill
 

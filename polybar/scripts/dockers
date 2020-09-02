@@ -26,8 +26,9 @@ TAB=' '
 count="0"
 for key in "${sorted[@]}"; do
     if [ "${statuses[$key]}" == "a" ]; then
-      CONTAINER=" "
-      CONTAINER="$CONTAINER$key "
+      CONTAINER="%{B#4c566a} $key %{B-}"
+    else
+      CONTAINER=" $key "
     fi
     if [ "$count" -eq "0" ]; then
       count="1"
