@@ -26,7 +26,7 @@ separator =
 modules-left = i3
 modules-center = date
 modules-right = docker
-font-0 = Terminus (TTF):size=6;0
+font-0 = Terminus (TTF):size=6;2
 
 wm-restack = i3
 tray-position = none
@@ -155,17 +155,17 @@ index-sort = true
 
 fuzzy-match = false
 
-ws-icon-0 = 0;web
-ws-icon-1 = 1;down
-ws-icon-2 = 2;sys
-ws-icon-3 = 3;git
-ws-icon-4 = 4;mola
-ws-icon-5 = 5;cb:a
-ws-icon-6 = 6;cb:b
-ws-icon-7 = 7;nf:a
-ws-icon-8 = 8;nf:b
-ws-icon-9 = 9;nf:c
-ws-icon-10 = 10;com
+ws-icon-0 = 0;WEB
+ws-icon-1 = 1;TORRENT
+ws-icon-2 = 2;ARCH
+ws-icon-3 = 3;PYTHON
+ws-icon-4 = 4;MOLA
+ws-icon-5 = 5;CBIS1
+ws-icon-6 = 6;CBIS2
+ws-icon-7 = 7;NF1
+ws-icon-8 = 8;NF2
+ws-icon-9 = 9;NF3
+ws-icon-10 = 10;COMPANY
 ws-icon-11 = 11;-
 ws-icon-12 = 12;-
 ws-icon-13 = 13;-
