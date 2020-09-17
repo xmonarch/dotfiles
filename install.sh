@@ -4,6 +4,7 @@ read -p "WARNING: This may overwrite your current configs. Proceed? [y/N]" -n 1 
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+	sudo cp wallpaper/florest-stair2-mola.jpg /usr/share/pixmaps/wallpaper.jpg
 	ln -sfn $PWD/termite ~/.config/termite
 	ln -sfn $PWD/picom ~/.config/picom
 	ln -sfn $PWD/fish ~/.config/fish
