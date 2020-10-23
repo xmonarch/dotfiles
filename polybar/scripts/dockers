@@ -28,23 +28,15 @@ while IFS= read -rd '' key; do
 done < <(printf '%s\0' "${!statuses[@]}" | sort -z)
 
 
-LIST=" "
-TAB=' '
-count="0"
+LIST=""
 for key in "${sorted[@]}"; do
     if [ "${statuses[$key]}" == "a" ]; then
-      CONTAINER="%{B#4c566a} $key %{B-}"
+      echo '${color b8bb26}↑ ${color d8dee9}'$key
     else
-      CONTAINER=" $key "
-    fi
-    if [ "$count" -eq "0" ]; then
-      count="1"
-    else
-      CONTAINER="${TAB}"$CONTAINER
+      echo '${color fb4934}↓ ${color d8dee9}'$key
     fi
     LIST=$LIST$CONTAINER
 done
 
-printf '%s  \n' "$LIST"
 
 

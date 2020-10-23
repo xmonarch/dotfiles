@@ -1,11 +1,9 @@
 # dotfiles
 
-![Sample](/screens/screenshot.png)
-
 - **system**: archlinux
 - **theme**: nord
-- **wm**: i3-gaps-rounded-git
+- **wm**: i3-gaps
 - **bar**: polybar
-- **shell**: fish
+- **shell**: zsh
 - **terminal**: termite
 - **font**: terminus

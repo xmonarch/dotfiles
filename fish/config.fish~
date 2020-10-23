@@ -1,4 +1,0 @@
-alias proc="ps aux | grep -i "
-alias grep="grep --exclude-dir='.svn'"
-
-set -U fish_greeting

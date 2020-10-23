@@ -1,6 +1,6 @@
 [colors]
 foreground = #eceff4
-background = #2e3440
+background = #2e344000
 red = #bf616a
 foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color7:#222}
@@ -23,10 +23,9 @@ padding-right = 0
 module-margin-left = 2
 module-margin-right = 2
 separator =
-modules-left = i3
-modules-center = date
-modules-right = docker
+modules-center = i3
 font-0 = Terminus (TTF):size=6;2
+font-1 = 
 
 wm-restack = i3
 tray-position = none
@@ -61,9 +60,7 @@ font-0 = Terminus (TTF):size=6
 overline-size = 1
 underline-size = 0
 underline-color = ${colors.alert}
-modules-left = volume dirty memory cpu_temp nvme_temp vpn work
-modules-center = clock
-modules-right =
+modules-center = volume dirty memory cpu_temp nvme_temp vpn work
 wm-restack = i3
 
 [module/memory]
@@ -71,13 +68,13 @@ type = custom/script
 exec = ~/.config/polybar/scripts/memory
 format = <label>
 format-padding = 1
-label = %{B#4c566a} MEM %{B-}%output%
+label = %{F#dab997} MEM %{F-}%output%
 interval = 10
 
 [module/volume]
 type = internal/pulseaudio
 sink = alsa_output.usb-PreSonus_PreSonus_AudioBox_iTwo_AB5C14101903-00.analog-stereo
-format-volume = %{B#4c566a} VOL %{B-} <label-volume>
+format-volume = %{F#dab997}VOL %{F-}<label-volume>
 format-volume-padding = 1
 label-muted = VOL
 format-muted-padding = 1
@@ -88,7 +85,7 @@ exec = ~/.config/polybar/scripts/dirty
 format = <label>
 format-padding = 1
 format-underline = #4c566a
-label = %{B#4c566a} USB %{B-} %output%
+label = %{F#dab997} USB %{F-} %output%
 interval = 1
 
 [module/cpu_temp]
@@ -96,7 +93,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/cpu_temp
 format = <label>
 format-padding = 1
-label = %{B#4c566a} CPU %{B-} %output%°C
+label = %{F#dab997} CPU %{F-} %output%°C
 interval = 5
 
 [module/nvme_temp]
@@ -104,14 +101,14 @@ type = custom/script
 exec = ~/.config/polybar/scripts/nvme_temp
 format = <label>
 format-padding = 1
-label = %{B#4c566a} NVME %{B-} %output%°C
+label = %{F#dab997} NVME %{F-} %output%°C
 interval = 5
 
 [module/vpn]
 type = custom/script
 exec = pgrep openvpn
 interval = 3
-label = %{B#4c566a} VPN %{B-}
+label = %{F#dab997} VPN %{F-}
 format-padding = 1
 
 [module/work]
@@ -119,7 +116,7 @@ type = custom/script
 exec = echo work
 exec-if = ip addr show | grep 11.11.11
 format = <label>
-label = %{B#4c566a} WORK VPN %{B-}
+label = %{F#dab997} WORK VPN %{F-}
 interval = 5
 format-padding = 1
 
@@ -131,21 +128,6 @@ label = %output%
 interval = 5
 format-padding = 1
 
-[module/clock]
-type = custom/script
-exec = ~/.config/polybar/scripts/clock.sh
-interval = 5
-format = <label>
-label = %output%
-
-[module/date]
-type = custom/script
-exec = ~/.config/polybar/scripts/date.sh
-interval = 5
-format = <label>
-label = %output%
-
-
 [module/i3]
 type = internal/i3
 
@@ -155,16 +137,16 @@ index-sort = true
 
 fuzzy-match = false
 
-ws-icon-0 = 0;WEB
-ws-icon-1 = 1;TORRENT
-ws-icon-2 = 2;ARCH
+ws-icon-0 = 0;FIREFOX
+ws-icon-1 = 1;TORRENTS
+ws-icon-2 = 2;SYSTEM
 ws-icon-3 = 3;PYTHON
 ws-icon-4 = 4;MOLA
-ws-icon-5 = 5;CBIS1
-ws-icon-6 = 6;CBIS2
-ws-icon-7 = 7;NF1
-ws-icon-8 = 8;NF2
-ws-icon-9 = 9;NF3
+ws-icon-5 = 5;INTELLIJ
+ws-icon-6 = 6;LOGS
+ws-icon-7 = 7;BPMN
+ws-icon-8 = 8;STEAM
+ws-icon-9 = 9;FREE
 ws-icon-10 = 10;COMPANY
 ws-icon-11 = 11;-
 ws-icon-12 = 12;-
@@ -190,7 +172,8 @@ label-mode-foreground = ${colors.foreground}
 label-mode-background = #00000000
 label-focused = %icon%
 #label-focused-underline = ${colors.foreground}
-label-focused-background = #4c566a
+label-focused-foreground = #83adad
+#label-focused-foreground = #262626
 label-focused-padding = 1
 label-unfocused = %icon%
 label-unfocused-padding = 1
@@ -200,6 +183,6 @@ label-visible-padding = 1
 label-urgent = %icon%
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 1
-label-separator = 
+label-separator = ●
 label-separator-padding = 0
 label-separator-foreground = ${colors.foreground}

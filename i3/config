@@ -2,8 +2,8 @@ set $mod Mod4
 
 floating_modifier $mod
 
-set_from_resource $fg #b48ead #b48ead
-set_from_resource $bg #5e81ac #5e81ac
+set_from_resource $fg #ebdbb2 #ebdbb2
+set_from_resource $bg #8a8a8a #8a8a8a
 
 bindsym $mod+Return exec termite
 bindsym $mod+d exec dmenu_run -fn 'Terminus (TTF)-12' -nb "#2e3440" -nf "#88c0d0" -sb "#88c0d0" -sf "#2e3440"
@@ -15,6 +15,8 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 bindsym $mod+Shift+space floating toggle
+bindsym --whole-window --border $mod+button4 workspace prev
+bindsym --whole-window --border $mod+button5 workspace next
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -49,10 +51,10 @@ bindsym $mod+Shift+8 workspace 19
 bindsym $mod+Shift+9 workspace 20
 bindsym $mod+Shift+0 workspace 21
 
-gaps inner 40
-gaps outer 0
-for_window [class="^.*"] border pixel 0
-border_radius 10
+gaps inner 50
+gaps outer 40
+for_window [class="^.*"] border pixel 1
+border_radius 0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $fg
@@ -106,9 +108,10 @@ bindsym $mod+Escape exec --no-startup-id i3lock-fancy-rapid 5 3
 bindsym $mod+F4 mode "$mode_system"
 hide_edge_borders smart
 
-exec --no-startup-id /usr/bin/feh --bg-scale /usr/share/pixmaps/wallpaper.jpg
+exec --no-startup-id /usr/bin/feh --bg-fill /usr/share/pixmaps/wallpaper.jpg
 exec --no-startup-id nm-applet
 exec --no-startup-id setxkbmap pl
-exec --no-startup-id picom -b
+exec --no-startup-id picom --experimental-backends --backend glx -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id conky -c ~/.config/conky/clock.conf -d
 exec --no-startup-id dunst

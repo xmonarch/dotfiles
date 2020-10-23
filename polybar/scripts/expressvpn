@@ -1,0 +1,3 @@
+#!/bin/bash
+if [ $(pgrep openvpn | wc -l) -eq 1 ]; then echo "EXPRESS"; fi
+
