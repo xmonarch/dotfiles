@@ -7,7 +7,6 @@ set_from_resource $bg #8a8a8a #8a8a8a
 
 bindsym $mod+Return exec termite
 bindsym $mod+d exec dmenu_run -fn 'Terminus (TTF)-12' -nb "#2e3440" -nf "#88c0d0" -sb "#88c0d0" -sf "#2e3440"
-bindsym $mod+F12 exec wal -R -e
 bindsym $mod+Shift+q kill
 
 bindsym $mod+Left focus left
@@ -17,6 +16,8 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+space floating toggle
 bindsym --whole-window --border $mod+button4 workspace prev
 bindsym --whole-window --border $mod+button5 workspace next
+bindsym $mod+Next workspace next
+bindsym $mod+Prior workspace prev
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
