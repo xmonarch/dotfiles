@@ -15,6 +15,5 @@ ln -sfn $PWD/picom ~/.config/picom
 ln -sfn $PWD/i3 ~/.config/i3
 ln -sfn $PWD/polybar ~/.config/polybar
 ln -sfn $PWD/dunst ~/.config/dunst
-ln -sfn $PWD/conky ~/.config/conky
 
 
