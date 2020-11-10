@@ -20,8 +20,8 @@ case "$workspace" in
      # done!
      i3-msg 'append_layout ~/.config/i3/layout/layout1.json'
      transmission-gtk &
-     thunar &
-     thunar &
+     nemo &
+     nemo &
      ;;
    "2")
      # done!

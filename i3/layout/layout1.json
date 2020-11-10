@@ -39,7 +39,7 @@
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^Thunar$"
+                  "class": "^Nemo$"
                }
             ],
             "type": "con"
@@ -58,7 +58,7 @@
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^Thunar$"
+                  "class": "^Nemo$"
                }
             ],
             "type": "con"
