@@ -110,7 +110,6 @@ bindsym $mod+F4 mode "$mode_system"
 hide_edge_borders smart
 
 exec --no-startup-id /usr/bin/feh --bg-fill /usr/share/pixmaps/wallpaper.jpg
-exec --no-startup-id nm-applet
 exec --no-startup-id setxkbmap pl
 exec --no-startup-id picom --experimental-backends --backend glx -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
