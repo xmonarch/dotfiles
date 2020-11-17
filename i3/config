@@ -2,8 +2,8 @@ set $mod Mod4
 
 floating_modifier $mod
 
-set_from_resource $fg #ebdbb2 #ebdbb2
-set_from_resource $bg #8a8a8a #8a8a8a
+set_from_resource $fg #8a8a8a #8a8a8a
+set_from_resource $bg #262626 #262626
 
 bindsym $mod+Return exec termite
 bindsym $mod+d exec dmenu_run -fn 'Terminus (TTF)-12' -nb "#2e3440" -nf "#88c0d0" -sb "#88c0d0" -sf "#2e3440"
