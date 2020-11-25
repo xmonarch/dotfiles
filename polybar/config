@@ -23,8 +23,8 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 separator =
-modules-left = date
-modules-right = vpn work dirty memory cpu_temp nvme_temp volume
+modules-left = 
+modules-right = vpn work dirty memory cpu_temp nvme_temp volume date
 modules-center = i3
 font-0 = Terminus (TTF):style=Bold:size=6;2
 font-1 = 
@@ -49,20 +49,20 @@ interval = 1.0
 date =  %b %d %H:%M
 format-padding = 1
 format-foreground = #282828
-format-background = #fabd2f
+format-background = #d3869b
 
 [module/memory]
 type = custom/script
 exec = ~/.config/polybar/scripts/memory
 format = <label>
 format-padding = 1
-label = %{F#dab997} MEM %{F-}%output%
+label = %{F#d3869b} MEM %{F-}%output%
 interval = 10
 
 [module/volume]
 type = internal/pulseaudio
 sink = alsa_output.usb-PreSonus_PreSonus_AudioBox_iTwo_AB5C14101903-00.analog-stereo
-format-volume = %{F#dab997}VOL %{F-}<label-volume>
+format-volume = %{F#d3869b}VOL %{F-}<label-volume>
 format-volume-padding = 1
 label-muted = VOL
 format-muted-padding = 1
@@ -72,7 +72,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/dirty
 format = <label>
 format-padding = 1
-label = %{F#dab997} USB %{F-} %output%
+label = %{F#d3869b} USB %{F-} %output%
 interval = 1
 
 [module/cpu_temp]
@@ -80,7 +80,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/cpu_temp
 format = <label>
 format-padding = 1
-label = %{F#dab997} CPU %{F-} %output%°C
+label = %{F#d3869b} CPU %{F-} %output%°C
 interval = 5
 
 [module/nvme_temp]
@@ -88,7 +88,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/nvme_temp
 format = <label>
 format-padding = 1
-label = %{F#dab997} NVME %{F-} %output%°C
+label = %{F#d3869b} NVME %{F-} %output%°C
 interval = 5
 
 [module/vpn]
@@ -159,7 +159,7 @@ label-mode-foreground = ${colors.foreground}
 label-mode-background = #00000000
 label-focused = %icon%
 #label-focused-underline = ${colors.foreground}
-label-focused-foreground = #83adad
+label-focused-foreground = #d3869b
 #label-focused-foreground = #262626
 label-focused-padding = 1
 label-unfocused = %icon%

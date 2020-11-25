@@ -2,7 +2,7 @@ set $mod Mod4
 
 floating_modifier $mod
 
-set_from_resource $fg #fb4934 #fb4934
+set_from_resource $fg #d3869b #d3869b
 set_from_resource $bg #8a8a8a #8a8a8a
 
 bindsym $mod+Return exec termite
