@@ -1,0 +1,9 @@
+/**
+ * Most of the UI modifications come from https://www.reddit.com/r/FirefoxCSS/comments/a9vgxl/minimalist_theme/ by u/griam
+ */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#back-button, #forward-button { 
+	display:none !important; 
+}
+
