@@ -55,7 +55,6 @@ bindsym $mod+Shift+0 workspace 21
 gaps inner 50
 gaps outer 40
 for_window [class="^.*"] border pixel 1
-border_radius 0
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $fg
