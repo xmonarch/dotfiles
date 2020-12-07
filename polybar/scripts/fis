@@ -1,3 +1,0 @@
-#!/bin/bash
-if [ $(ip addr show | grep 11.11.11 | wc -l) -eq 1 ]; then echo "FIS"; fi
-
