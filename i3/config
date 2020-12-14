@@ -18,6 +18,7 @@ bindsym --whole-window --border $mod+button4 workspace prev
 bindsym --whole-window --border $mod+button5 workspace next
 bindsym $mod+Next workspace next
 bindsym $mod+Prior workspace prev
+bindsym $mod+w sticky toggle
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
