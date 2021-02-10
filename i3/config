@@ -53,8 +53,8 @@ bindsym $mod+Shift+8 workspace 19
 bindsym $mod+Shift+9 workspace 20
 bindsym $mod+Shift+0 workspace 21
 
-gaps inner 50
-gaps outer 40
+gaps inner 30
+gaps outer 20
 for_window [class="^.*"] border pixel 1
 
 # class                 border  backgr. text indicator child_border
@@ -114,3 +114,4 @@ exec --no-startup-id setxkbmap pl
 exec --no-startup-id picom --experimental-backends --backend glx -b
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
+exec --no-startup-id redshift -l 52.22977:21.01178
