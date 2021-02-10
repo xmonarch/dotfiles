@@ -9,5 +9,5 @@
 - **font**: `aur/terminus-font-ttf`
 - **greeter**: `aur/lightdm-mini-greeter-git`
 - **compositor**: `community/picom`
-- **notifications**: community/dunst
+- **notifications**: `community/dunst`
 
