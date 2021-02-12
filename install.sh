@@ -8,9 +8,8 @@ fi
 sudo cp wallpaper/wallpaper.jpg /usr/share/pixmaps/wallpaper.jpg
 sudo cp lightdm/lightdm.conf /etc/lightdm/
 sudo cp lightdm/lightdm-mini-greeter.conf /etc/lightdm/
-cp blinks-mod.zsh-theme /home/maroslaw/.oh-my-zsh/themes/
+cp blinks-mod.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~/.zshrc
-cp .vimrc ~/.vimrc
 ln -sfn $PWD/termite ~/.config/termite
 ln -sfn $PWD/picom ~/.config/picom
 ln -sfn $PWD/i3 ~/.config/i3
