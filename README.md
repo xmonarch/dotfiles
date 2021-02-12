@@ -11,3 +11,11 @@
 - **compositor**: `community/picom`
 - **notifications**: `community/dunst`
 
+## Additional packages
+`aur/yay-bin`
+`aur/ananicy-git`
+`extra/feh`
+`community/nemo`
+`community/nemo-image-converter`
+`community/nemo-fileroller`
+
