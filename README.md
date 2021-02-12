@@ -20,4 +20,5 @@
 `community/nemo-fileroller`
 `aur/gruvbox-dark-gtk`
 `aur/gruvbox-icon-theme`
+`community/redshift`
 

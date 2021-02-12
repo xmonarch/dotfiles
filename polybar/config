@@ -106,14 +106,6 @@ label = %{T2}%{F#d3869b} WORK VPN %{F-}%{T-}
 interval = 5
 format-padding = 1
 
-[module/docker]
-type = custom/script
-exec = ~/.config/polybar/scripts/dockers
-format = <label>
-label = %output%
-interval = 5
-format-padding = 1
-
 [module/i3]
 type = internal/i3
 
