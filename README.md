@@ -2,7 +2,7 @@
 
 - **system**: archlinux
 - **theme**: gruvbox
-- **wm**: `community/i3-gaps`
+- **wm**: `community/i3-gaps` + `aur/i3lock-fancy-git`
 - **bar**: `aur/polybar-git`
 - **shell**: `extra/zsh` + ohmyzsh
 - **terminal**: `community/termite`
