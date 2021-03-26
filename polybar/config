@@ -92,7 +92,7 @@ interval = 5
 
 [module/vpn]
 type = custom/script
-exec = pgrep openvpn
+exec = expressvpn status | grep Connected
 interval = 3
 label = %{T2}%{F#d3869b} VPN %{F-}%{T-}
 format-padding = 1
@@ -115,7 +115,7 @@ index-sort = true
 
 fuzzy-match = false
 
-ws-icon-0 = 0;FIREFOX
+ws-icon-0 = 0;WEB
 ws-icon-1 = 1;TORRENTS
 ws-icon-2 = 2;SYSTEM
 ws-icon-3 = 3;PYTHON
