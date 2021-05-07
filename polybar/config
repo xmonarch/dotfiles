@@ -1,6 +1,6 @@
 [colors]
-foreground = #eceff4
-background = #002e3440
+foreground = #f7f7f7
+background = #303430
 red = #bf616a
 foreground-alt = ${xrdb:color7:#222}
 primary = ${xrdb:color7:#222}
@@ -12,7 +12,7 @@ unfocused = ${xrdb:color1:#222}
 [bar/top]
 enable-ipc = true
 bottom = false
-monitor = DP-0
+monitor = DP-4
 width = 100%
 height = 22
 dpi = 192
@@ -48,20 +48,20 @@ type = custom/script
 interval = 1.0
 exec = date +"%d/%m %H:%M"
 format-padding = 1
-label = %{T2}%{F#d3869b} %output% %{F-}%{T-}
+label = %{T2}%{F#a1b5cd} %output% %{F-}%{T-}
 
 [module/memory]
 type = custom/script
 exec = ~/.config/polybar/scripts/memory
 format = <label>
 format-padding = 1
-label = %{F#d3869b} MEM %{F-}%output%
+label = %{F#a1b5cd} MEM %{F-}%output%
 interval = 10
 
 [module/volume]
 type = internal/pulseaudio
 sink = alsa_output.usb-PreSonus_PreSonus_AudioBox_iTwo_AB5C14101903-00.analog-stereo
-format-volume = %{F#d3869b}VOL %{F-}<label-volume>
+format-volume = %{F#a1b5cd}VOL %{F-}<label-volume>
 format-volume-padding = 1
 label-muted = VOL
 format-muted-padding = 1
@@ -71,7 +71,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/dirty
 format = <label>
 format-padding = 1
-label = %{F#d3869b} USB %{F-} %output%
+label = %{F#a1b5cd} USB %{F-} %output%
 interval = 1
 
 [module/cpu_temp]
@@ -79,7 +79,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/cpu_temp
 format = <label>
 format-padding = 1
-label = %{F#d3869b} CPU %{F-} %output%°C
+label = %{F#a1b5cd} CPU %{F-} %output%°C
 interval = 5
 
 [module/nvme_temp]
@@ -87,14 +87,14 @@ type = custom/script
 exec = ~/.config/polybar/scripts/nvme_temp
 format = <label>
 format-padding = 1
-label = %{F#d3869b} NVME %{F-} %output%°C
+label = %{F#a1b5cd} NVME %{F-} %output%°C
 interval = 5
 
 [module/vpn]
 type = custom/script
 exec = expressvpn status | grep Connected
 interval = 3
-label = %{T2}%{F#d3869b} VPN %{F-}%{T-}
+label = %{T2}%{F#a1b5cd} VPN %{F-}%{T-}
 format-padding = 1
 
 [module/work]
@@ -102,7 +102,7 @@ type = custom/script
 exec = echo work
 exec-if = ip addr show | grep 11.11.11
 format = <label>
-label = %{T2}%{F#d3869b} WORK VPN %{F-}%{T-}
+label = %{T2}%{F#a1b5cd} WORK VPN %{F-}%{T-}
 interval = 5
 format-padding = 1
 
@@ -150,7 +150,7 @@ label-mode-foreground = ${colors.foreground}
 label-mode-background = #00000000
 label-focused = %icon%
 #label-focused-underline = ${colors.foreground}
-label-focused-foreground = #d3869b
+label-focused-foreground = #a1b5cd
 #label-focused-foreground = #262626
 label-focused-padding = 1
 label-unfocused = %icon%
